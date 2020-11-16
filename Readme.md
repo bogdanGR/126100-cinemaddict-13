@@ -1,7 +1,7 @@
 # Проект «Киноман» [![Build status][travis-image]][travis-url]
 
 * Студент: [Богдан Васкан](https://up.htmlacademy.ru/ecmascript/13/user/126100).
-* Наставник: `Неизвестно`.
+* Наставник: `Без наставника`.
 
 ---
 
