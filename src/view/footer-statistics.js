@@ -1,5 +1,5 @@
-export const createFooterStatistics = () => {
+export const createFooterStatistics = (FILM_CARDS_COUNT) => {
   return `<section class="footer__statistics">
-            <p>130 291 movies inside</p>
+            <p>${FILM_CARDS_COUNT} movies inside</p>
           </section>`;
 };
