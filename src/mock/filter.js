@@ -1,6 +1,5 @@
 export const getFilterNum = (filmCard) => {
   const counts = {
-    all: filmCard.length,
     Watchlist: 0,
     History: 0,
     Favorites: 0

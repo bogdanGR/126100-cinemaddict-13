@@ -1,6 +1,6 @@
-import {humanizeFilmCardDate} from "../utils";
+import {humanizeFilmCardDate, createElement} from "../utils";
 
-export const createFilmCardTemplate = (film) => {
+const createFilmCardTemplate = (film) => {
   const {title, poster, descriptions, genre, rating, isInWatchList, isWatched, isFavorite, year, duration} = film;
   const inWatchlistClass = isInWatchList ? `film-card__controls-item--active` : ``;
   const watchedClass = isWatched ? `film-card__controls-item--active` : ``;
@@ -25,3 +25,27 @@ export const createFilmCardTemplate = (film) => {
           </div>
         </article>`;
 };
+
+export default class FilmCard {
+  constructor(film) {
+    this._film = film;
+    this._element = null;
+  }
+
+  getTemplate() {
+    return createFilmCardTemplate(this._film);
+  }
+
+  getElement() {
+    if (!this._element) {
+      this._element = createElement(this.getTemplate());
+    }
+
+    return this._element;
+  }
+
+  removeElement() {
+    this._element = null;
+  }
+}
+
