@@ -1,6 +1,6 @@
-import {humanizeDatePopup} from "../utils";
+import {createElement, humanizeDatePopup} from "../utils";
 
-export const createPopupTemplate = (film) => {
+const createPopupTemplate = (film) => {
   const {title, poster, descriptions, genre, rating, isInWatchList, isWatched, isFavorite, year, duration, ageRestriction, director, writer, actor, country} = film;
 
   const inWatchlistClass = isInWatchList ? `checked` : ``;
@@ -179,3 +179,25 @@ export const createPopupTemplate = (film) => {
   </form>
 </section>`;
 };
+export default class Popup {
+  constructor(film) {
+    this._film = film;
+    this._element = null;
+  }
+
+  getTemplate() {
+    return createPopupTemplate(this._film);
+  }
+
+  getElement() {
+    if (!this._element) {
+      this._element = createElement(this.getTemplate());
+    }
+
+    return this._element;
+  }
+
+  removeElement() {
+    this._element = null;
+  }
+}
