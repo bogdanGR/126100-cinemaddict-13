@@ -68,10 +68,6 @@ const filmsList = siteMainElement.querySelector(`.films-list`);
 const filmsNode = siteMainElement.querySelector(`.films`);
 
 if (FILM_CARDS_COUNT) {
-  // for (let i = 0; i < MAX_RENDER_CARDS; i++) {
-  //   renderCards(filmListContainer, films[i]).getElement();
-  // }
-
   films
     .slice(0, Math.min(films.length, MAX_RENDER_CARDS))
     .forEach((cardTpl) => renderCards(filmListContainer, cardTpl));
