@@ -1,4 +1,4 @@
-import {createElement} from "../utils";
+import {createElement} from "../utils/render";
 
 export const createMostCommentedTemplate = () => {
   return `<section class="films-list films-list--extra films-list--most-commented">

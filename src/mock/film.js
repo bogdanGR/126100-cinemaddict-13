@@ -1,4 +1,5 @@
-import {getRandomInteger, getRandomItemFromArray, getRandomItems} from "../utils";
+import {getRandomInteger, getRandomItemFromArray, getRandomItems} from "../utils/common";
+import {generateComments} from "./comment";
 import dayjs from "dayjs";
 
 const MIN_RATING = 1;
@@ -132,7 +133,7 @@ export const getFilmCard = () => ({
   genre: new Set(getRandomItems(genre)),
   rating: getRandomInteger(MIN_RATING, MAX_RATING),
   year: generateDate(),
-  comments: filmComments,
+  comments: generateComments(),
   isInWatchList: Boolean(getRandomInteger(0, 1)),
   isWatched: Boolean(getRandomInteger(0, 1)),
   isFavorite: Boolean(getRandomInteger(0, 1)),
