@@ -11,7 +11,10 @@ import Footer from "./view/footer-statistics";
 import NoFilm from "./view/no-films";
 import {getFilmCard} from "./mock/film";
 import {getFilterNum} from "./mock/filter";
-import {render, RenderPosition, isDeactivateEvent} from "./utils.js";
+import {render, RenderPosition} from "./utils/render.js";
+import {isDeactivateEvent} from "./utils/common";
+import {Comment} from "./view/comment";
+import {generateComments} from "./mock/comment";
 
 const FILM_CARDS_COUNT = 25;
 const MAX_RENDER_CARDS = 5;
@@ -27,6 +30,7 @@ const siteFooterElement = document.querySelector(`.footer`);
 const renderCards = (container, cardsTpl) => {
   const card = new FilmCard(cardsTpl);
   const cardDetails = new Popup(cardsTpl);
+  const cardComments = new Comment(generateComments());
 
   const closeByEscHandler = (evt) => {
     if (isDeactivateEvent(evt)) {

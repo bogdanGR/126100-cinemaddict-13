@@ -1,4 +1,4 @@
-import {createElement} from "../utils";
+import {createElement} from "../utils/render";
 
 const createTopRatedFilmsTemplate = () => {
   return `<section class="films-list films-list--extra  films-list--top-related">
