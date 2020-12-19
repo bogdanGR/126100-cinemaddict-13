@@ -7,7 +7,6 @@ const createPopupTemplate = (film) => {
   const watchedClass = isWatched ? `checked` : ``;
   const favoriteClass = isFavorite ? `checked` : ``;
   const relaseDateOfFilm = humanizeDatePopup(year);
-
   return `<section class="film-details" >
   <form class="film-details__inner" action="" method="get">
     <div class="film-details__top-container">
