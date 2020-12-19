@@ -3,6 +3,7 @@ import Abstract from "./abstract";
 const createPopupTemplate = (film) => {
   const {title, poster, descriptions, genre, rating, isInWatchList, isWatched, isFavorite, year, duration, ageRestriction, director, writer, actor, country, comments} = film;
 
+
   const inWatchlistClass = isInWatchList ? `checked` : ``;
   const watchedClass = isWatched ? `checked` : ``;
   const favoriteClass = isFavorite ? `checked` : ``;
